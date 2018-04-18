@@ -1,13 +1,85 @@
 <?php
 
-
 namespace Books\Model;
 
-
+/**
+ * @Entity @Table(name="books")
+ */
 class Books
 {
-    public function getList()
+    /** @Id @Column(type="integer") @GeneratedValue  */
+    protected $id;
+
+    /** @Column(type="string") */
+    protected $name;
+
+    /** @Column(type="string") */
+    protected $description;
+
+    /** @Column(type="string") */
+    protected $autor;
+
+    /**
+     * @return mixed
+     */
+    public function getId()
     {
-        return array(1, 2, 3, 4, 5, 6);
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @param mixed $autor
+     */
+    public function setAutor($autor)
+    {
+        $this->autor = $autor;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAutor()
+    {
+        return $this->autor;
     }
 }

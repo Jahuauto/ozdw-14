@@ -1,0 +1,6 @@
+<h1>Rekordy z bazy</h1>
+<ul>
+    {% for book in books %}
+    <li>{{ book.id }} {{ book.name }} {{ book.description }} {{ book.autor }}</li>
+    {% endfor %}
+</ul>
